@@ -1,0 +1,80 @@
+/* =========================================
+   ESTILOS BASE (MOBILE FIRST)
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Fondo general de la página en un gris muy claro */
+    background-color: #f4f6f7;
+}
+
+/* CSS GRID: En móvil es una sola columna */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Barra Lateral con un tono beige/arena suave */
+.barra-lateral {
+    background-color: #fcf3cf;
+    /* Amarillo pastel suave */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #f9e79f;
+}
+
+/* FLEXBOX: Tarjetas apiladas en móvil */
+.productos-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjetas con un azul/grisáceo pastel muy limpio */
+.tarjeta-producto {
+    background-color: #ebf5fb;
+    /* Azul pastel suave */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #d4e6f1;
+}
+
+
+/* =========================================
+   MEDIA QUERY 1: TABLET (>= 768px)
+   ========================================= */
+@media (min-width: 768px) {
+
+    /* Flexbox: Tarjetas en fila */
+    .productos-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tarjeta-producto {
+        flex: 1;
+        margin: 0 5px;
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERY 2: ESCRITORIO (>= 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+
+    /* CSS Grid: Contenido (3/4) y Lateral (1/4) */
+    .grid-container {
+        grid-template-columns: 3fr 1fr;
+    }
+}
